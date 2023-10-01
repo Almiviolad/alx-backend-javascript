@@ -1,0 +1,7 @@
+export default function guardrai(mathFunction) {
+    const queue = {}
+    new Promise((resolve, reject) => {
+        mathFunction(() =>
+                     {resolve(value);
+                      reject(error)})}
+               )}
