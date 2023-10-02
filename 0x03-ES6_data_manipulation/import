@@ -1,0 +1,2 @@
+export default function getListStudentIds(listOfStudents) {
+    return listOfStudents.map((student) => student.id)}
