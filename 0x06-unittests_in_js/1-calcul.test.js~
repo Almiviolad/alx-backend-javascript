@@ -1,0 +1,84 @@
+const assert = require('assert');
+const calcNum = require('./0-calcul.js')
+
+describe('calculateNumber function', () => {
+    it('adds two whole numbers', () => {
+        assert.strictEqual(calcNum(SUM,7, 3), 10);
+    });
+    it('adds two decimal  numbers', () => {
+        assert.strictEqual(calcNum(SUM,3.6, 5.5), 10);
+    });
+    it('adds two decimal numbers and rounds first number', () => {
+        assert.strictEqual(calcNum('SUM',6.3, 3.8), 10);
+    });
+    it('adds two decimal number and rounds the second num', () => {
+        assert.strictEqual(calcNum('SUM',7.8, 2.2), 10);
+    });
+    it('case of additiin one decimal and one whole number', () => {
+        assert.strictEqual(calcNum('SUM',7.1, 3), 10);
+    });
+    it('case of one decimal and whole number 2', () => {
+        assert.strictEqual(calcNum('SUM',7, 3.1), 10);
+    });
+    it('case of addition of two zeros', () => {
+        assert.strictEqual(calcNum('SUM',0, 0.0), 0);
+    });
+    it('case of addition of  2  negative numbers', () => {
+        assert.strictEqual(calcNum('SUM',-7.4, -3), -10);
+    });
+
+    /* subtraction test*/
+    it('subtract two whole numbers', () => {
+        assert.strictEqual(calcNum('SUBTRACT',7, 3), 4);
+    });
+    it('subtract two decimal  numbers', () => {
+        assert.strictEqual(calcNum('SUBTRACT',3.6, 5.5), -2);
+    });
+    it('subtract two decimal numbers and rounds first number', () => {
+        assert.strictEqual(calcNum('SUBTRACT',6.3, 3.8), 2);
+    });
+    it('subtract  two decimal number and rounds the second num', () => {
+        assert.strictEqual(calcNum('SUBTRACT',7.8, 2.2), 6);
+    });
+    it('case of subtraction of  one decimal and one whole number', () => {
+        assert.strictEqual(calcNum('SUBTRACT',7.1, 3), 4);
+    });
+    it('case of one decimal and whole number 2', () => {
+        assert.strictEqual(calcNum('SUBTRACT',7, 3.1), 4);
+    });
+    it('case ofsubtraction of two zeros', () => {
+        assert.strictEqual(calcNum('SUBTRACT',0, 0.0), 0);
+    });
+    it('case of subtraction of  2  negative numbers', () => {
+        assert.strictEqual(calcNum('SUBTRACT',-7.4, -3), -4);
+    });
+
+    /*Division tests*/
+    it('divides  two whole numbers', () => {
+        assert.strictEqual(calcNum('DIVIDE', 9, 3), 3);
+    });
+    it('divides two decimal  numbers', () => {
+        assert.strictEqual(calcNum('DIVIDE',6.6, 1.1), 7);
+    });
+    it('Divides two decimal numbers and rounds first number', () => {
+        assert.strictEqual(calcNum('DIVIDE',6.3, 2.8), 2);
+    });
+    it('divides two decimal number and rounds the second num', () => {
+        assert.strictEqual(calcNum('DIVIDE',7.8, 2.2), 4);
+    });
+    it('case of division one decimal and one whole number', () => {
+        assert.strictEqual(calcNum('DIVIDE',7.1, 1), 7 );
+    });
+    it('case of one decimal and whole number 2', () => {
+        assert.strictEqual(calcNum('DIVIDE',7, 7.1), 1);
+    });
+    it('case of zero division', () => {
+        assert.strictEqual(calcNum('DIVIDE',10, 0), 'Error');
+    });
+    it('case of division of  2  negative numbers', () => {
+        assert.strictEqual(calcNum('DIVIDE',-8.8, -3), 3);
+    });
+    it('case of zero numerator', () => {
+        assert.strictEqual(calcNum('DIVIDE', 0, 3), 0);
+    });
+});
