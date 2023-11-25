@@ -1,5 +1,5 @@
 const assert = require('assert');
-const calcNum = require('./0-calcul.js')
+const calcNum = require('./1-calcul.js')
 
 describe('calculateNumber function', () => {
     it('adds two whole numbers', () => {
