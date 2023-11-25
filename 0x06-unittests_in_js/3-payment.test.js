@@ -1,0 +1,19 @@
+const sinon = require('sinon');
+const sendPaymentRequestToApi = require('./3-payment.js')
+const chai = require('chai');
+const { expect } = chai;
+const Utils = require('./utils')
+
+describe('sendPaymentRequestToApi', () => {
+    let spy;
+    beforeEach(() => {
+        spy = sinon.spy(Utils, 'calculateNumber');
+    });
+    afterEach(() => {
+        spy.restore();
+    });
+    it('should call utils function wuth right args and use same math', () => {
+        sendPaymentRequestToApi(100, 20);
+        expect(spy.calledOnce).to.be.true;
+        expect(spy.calledWith('SUM', 100, 20)).to.be.true});
+});
