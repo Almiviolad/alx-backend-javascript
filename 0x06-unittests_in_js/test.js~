@@ -1,0 +1,2 @@
+getPaymentTokenFromAPI(true).then((data) => {
+console.log(data)})

@@ -1,0 +1,8 @@
+async function getPaymentTokenFromAPI(success) {
+    if (success) {
+        return new promise((resolve) => {
+            data = {data: 'Successful response from the API' };
+            resolve(data);
+        })};
+}
+module.exports = getPaymentTokenFromAPI
